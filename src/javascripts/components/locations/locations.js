@@ -6,8 +6,8 @@ let locations = [];
 
 const domstringBuilder = () => {
   let domstring = '';
-  locations.forEach((movie) => {
-    domstring += `<h3>${movie.name}</h3>`;
+  locations.forEach((location) => {
+    domstring += `<h3>${location.name}</h3>`;
   });
   util.printToDom('locations', domstring);
 };
