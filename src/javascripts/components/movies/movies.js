@@ -7,9 +7,9 @@ let movies = [];
 const domstringBuilder = () => {
   let domstring = '';
   movies.forEach((movie) => {
-    domstring += `<div id="${movie.id}>`;
-    domstring += '<div class="card movie col-sm-3">';
-    domstring += `<h5>${movie.name}</h5>`;
+    domstring += `<div id="${movie.id}">`;
+    domstring += '<div class="card movie">';
+    domstring += `<h5 class="card-header">${movie.name}</h5>`;
     domstring += `<p>${movie.genre}</p>`;
     domstring += `<p>${movie.releaseDate}</p>`;
     domstring += `<p>${movie.description}</p>`;
