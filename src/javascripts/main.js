@@ -6,6 +6,7 @@ import '../styles/main.scss';
 const init = () => {
   movies.initializeMovies();
   locations.initializeLocations();
+  document.getElementById('clearButton').classList.add('hide');
 };
 
 init();
