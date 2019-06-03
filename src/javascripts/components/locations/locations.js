@@ -28,7 +28,7 @@ const shootTimeClass = (shootTime) => {
 const domStringBuilder = (locArray) => {
   let domstring = '';
   locArray.forEach((location) => {
-    domstring += `<div id="${location.id}">`;
+    domstring += `<div class="card location col-2" id="${location.id}">`;
     domstring += '<div class="card" width=" 10rem">';
     domstring += `<p class="card-header ${shootTimeClass(location.shootTime)}">${location.name}</p>`;
     domstring += `<img src="${location.imageUrl}"></img>`;
@@ -89,4 +89,9 @@ const initializeLocations = () => {
     .catch(err => console.error(err));
 };
 
-export default { initializeLocations };
+const getMovieLocations = (movieLocations) => {
+  const allowedLocations = locations.filter(x => movieLocations.includes(x.id));
+  domStringBuilder(allowedLocations);
+};
+
+export default { initializeLocations, getMovieLocations };
